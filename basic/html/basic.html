@@ -1,0 +1,53 @@
+<!-- 해당 파일이 어떤 문서인지 미리 알려줌-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--
+      viewport
+      현재 화면에 보여지고 있는 직사각형 영역을 의미
+
+        - width: 초기 뷰포트 너비 설정
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 인터넷 익스플로러(IE)에서 최신 표준 모드로 렌더링되도록 하는 설정-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    tr, td {
+      border: solid;
+    }
+  </style>
+</head>
+<body>
+  <h1>h1태그 테스트</h1>
+  <h2>h2태그 테스트</h2>
+
+  <p>
+    p태그 테스팅
+
+    <a href="https://www.google.com" target="_black">Google(새로운창)</a>
+    <a href="https://www.google.com" target="_self">Google(현재창)</a>
+  </p>
+
+  <!--
+    alt는 웹접근성을 높이는 필수 속성처럼 다루는 것이 좋음 (구글 SEO 문서에도 alt를 필수 권장함)
+  -->
+  <img src="./funny.gif" alt="IU"/>
+
+  <h2>TABLE 태그</h2>
+  <table>
+    <tr><td colspan="2">열 2개</td></tr>
+    <tr><td>열</td><td>열</td></tr>
+  </table>
+
+
+  <div style="margin: 30px 0px;">
+    <form action="login.html" method="POST">
+      ID: <input type="text" name="id" autofocus />
+      PW: <input type="password" name="pw" />
+    </form>
+  </div>
+</body>
+</html> 
