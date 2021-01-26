@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SELECTOR 2</title>
+
+  <style>
+    h1 {
+      color: gray;
+    }
+
+    /*
+      후손 셀렉터
+        div 아래의 모든 span이 바뀐다.
+    */
+    div span {
+      color: royalblue;
+    }
+
+    /*
+      자식 셀렉터
+        해당 태그의 자식만 바뀐다.
+    */
+    div > p {
+      color: violet;
+    }
+
+    /*
+      인접 형제 셀렉터
+        해당 태그와 같은 높이에 있는 다음 태그를 선택한다.
+        다음 이후에도 적용되도록 하고 싶다면 + 대신 ~를 쓴다.
+    */
+    h1 + h2 {
+      color: black;
+    }
+
+    input[type="checkbox"]:enabled + span {
+      color: royalblue;
+    }
+    input[type="checkbox"]:disabled + span {
+      color: orangered;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>NELL</h1>
+    <h2>이재경, 이정훈, 김종완, 정재원</h2>
+    <p>1999년에 결성된 대한민국의 모던 록밴드. 멤버는 김종완(보컬, 기타, 키보드), 
+      이재경(기타, 키보드), 이정훈(베이스, 탬버린, 키보드, 코러스), 정재원(드럼, 코러스). 
+      정식 멤버는 아니지만 2014년 들어 페스티벌이나 각종 공연에서 
+      키보드 및 기타 세션으로 피아의 심지와 바드의 루빈이 함께 다니고 있다.</p>
+
+    <div>
+      넬이라는 이름은
+      <span>
+        조디 포스터 주연의 영화 넬
+      </span>
+      에서 따왔다고 한다.
+    </div>
+  </div>
+
+  <form>
+    <input type="checkbox" value="check1" name="check" /><span>check1</span>
+    <input type="checkbox" value="check2" name="check" disabled /><span>check2</span>
+  </form>
+</body>
+</html>

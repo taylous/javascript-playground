@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taylous Page</title>
+
+  <!--
+    검색엔진에 의해 고려될 사항들
+  -->
+  <meta name="description" content="Vanila JavaScript 연습" />
+  <meta name="keywords" content="Vanila JavaScript" />
+  <meta name="author" content="taylous99" />
+  
+  <!--
+    user-scalable 을 사용하지 않는 디바이스를 위해, maximun-scale/minimum-scale 설정을 하는 것
+  -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!--
+    Open Graph (Facebook, LinkedIn)
+  -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Taylous Page" />
+  <meta property="og:description" content="practice vanila javascript" />
+  <meta property="og:image" content="img/fun-coding-mark.png" />
+  <meta property="og:url" content="https://www.fun-coding.org" />
+  <meta property="og:site_name" content="Taylous Page" />
+
+  <!--
+    https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/twitter-cards-implementation-with-websites/Images/summary_card_tweet.png
+  -->
+  <meta name="twitter:card" content="summary" />
+  <!--
+    card 종류: summary, photo, player
+  -->
+  <meta name="twitter:title" content="Taylous Page" />
+  <meta name="twitter:description" content="practice vanila javascript" />
+  <meta name="twitter:image" content="img/fun-coding-mark.png" />
+  <meta name="twitter:url" content="https://www.fun-coding.org" />
+  <meta name="twitter:creator" content="taylous99" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" />
+  <!-- iphone -->
+  <link rel="apple-touch-icon" href="img/favicon.ico" />
+  <!-- I.E -->
+  <link rel="shortcut icon" tyle="image/x-icon" href="img/favicon.ico" />
+
+  <!-- 
+    CSS Reset(1), style.css, 아이콘 폰트, 웹페이지 사용 폰트
+
+      💡 해당 구문은 다른 css 파일을 불러오기 전에 있어야 함.
+  -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <!-- https://fontawesome.com/start -->
+  <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />  
+</head>
+<body>
+  <!-- 
+    CSS class naming (BEM 명명규칙: Block Element Modifier 순으로 작성)
+      __ : ~ 의 하위 요소를(속해있는) 나타냄
+      -- : ~ 의 상태를 나타냄(수정한다 라는 느낌)
+      - : 단어와 단어사이는 하이픈 (BlueBox X, blueBox X, blue_box X, blue-box O)
+      예를 들어, box-container__title--blue 와 같이 작성할 수 있음 (참고로만 알아두면 됨)
+  -->
+  <header>
+    <div class="inner">
+      <div class="head-container">
+        <div class="head-brand">
+          <a href="https://github.com/Karmantez">Taylous Page</a>
+        </div>
+        <div class="head-blog">
+          <a href="https://github.com/Karmantez">menus</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Image Section -->
+  <section class="main">
+    <div class="main-container">
+      <div class="inner">
+        <div class="title-container">
+          <div class="title">NELL</div>
+          <div class="message">
+            1999년에 결성된 대한민국의 모던 록밴드. <br />
+            멤버는 김종완, 이재경, 이정훈, 정재원. <br />
+            정식 멤버는 아니지만 2014년 들어 페스티벌이나 각종 공연에서 <br />
+            키보드 및 기타 세션으로 피아의 심지와 바드의 루빈이 함께 다니고 있다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="inner">
+      <div class="skill-container">
+        <div class="skill">
+          <i class="fab fa-js skill-icon javascript-style"></i>
+          <div class="skill-title">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-usage">Front-end</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fab fa-vuejs skill-icon vue-style"></i>
+          <div class="skill-title">
+            <div class="skill-name">Vue.js</div>
+            <div class="skill-usage">Front-end</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fab fa-react skill-icon react-style"></i>
+          <div class="skill-title">
+            <div class="skill-name">React</div>
+            <div class="skill-usage">Front-end</div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fab fa-java skill-icon java-style"></i>
+          <div class="skill-title">
+            <div class="skill-name">Java</div>
+            <div class="skill-usage">Programming Language</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="inner">
+      <div class="roadmap-container">
+        <div class="roadmap-title-container">
+          <div class="roadmap-title">
+            테스트
+          </div>
+          <div class="arrow-container">
+            <i class="fas fa-chevron-circle-left slide-prev"></i>
+            <i class="fas fa-chevron-circle-right slide-next"></i>
+          </div>
+        </div>
+        <ul class="class-list">
+          <li class="class-card">
+            <img class="class-image" src="./img/colorsinblack.jpg" alt="오분 뒤에 봐" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <!-- <script src="js/main.js"></script> -->
+</body>
+</html>

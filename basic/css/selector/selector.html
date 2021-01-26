@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SELECTOR</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    #id-test {
+      color: blue;
+    }
+
+    .class-test {
+      color: red;
+    }
+
+    [data-value="value"] {
+      color: green;
+    }
+
+    /*
+      [속성~=값]: attr 속성값이 "specific"을 (공백으로 분리된) 단어로 포함하는 모든 태그(요소),
+                  대소문자 구분하지 않음
+    */
+    [data-value~="specific"] {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="id-test">테스트1</h1>
+  <h2 class="class-test">테스트2</h2>
+  <h3>테스트3</h3>
+  <h4>테스트4</h4>
+  <h5>테스트5</h5>
+
+  <p data-value="value specific">문단입니다.</p>
+  <p data-value="value">문단2입니다.</p>
+</body>
+</html>
