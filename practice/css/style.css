@@ -70,7 +70,7 @@ header {
   font-size: 1.2rem;
 }
 
-.head-container .head-brand a:hover {
+.head-container a:hover {
   color: #2186c4;
   cursor: pointer;
 }
@@ -221,6 +221,16 @@ section {
   color: #cfd8dc;
 }
 
+.slide-prev-hover:hover {
+  transition: transform 0.5s;
+  transform: translateX(-2px);
+}
+
+.slide-next-hover:hover {
+  transition: transform 0.5s;
+  transform: translateX(2px);
+}
+
 .arrow-container {
   display: flex;
 }
@@ -231,7 +241,10 @@ section {
   padding: 1rem 0;
   margin: 0;
 
-  overflow: hidden;
+  /*
+    overflow를 hidden으로 설정하면, transform시 이미지가 짤린다
+  */
+  overflow: none;
 }
 
 .class-card {
@@ -282,6 +295,11 @@ section {
 .class-desc {
   width: 100%;
   margin-top: 1rem;
+  color: #545e6f;
+}
+
+.class-desc:hover {
+  color: #2186c4;
 }
 
 .class-title {
@@ -293,12 +311,12 @@ section {
   overflow: hidden;
 
   font-weight: bold;
-  color: #545e6f;
+  color: inherit;
 }
 
 .class-detail {
   font-size: 0.9rem;
-  color: #545e6f;
+  color: inherit;
 
   line-height: 1.2rem;
 }
@@ -335,6 +353,66 @@ footer {
   margin: 1rem 0.5rem;
 }
 
+#backtotop {
+  background-color: rgb(47, 48, 89);
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+  /*
+    border-radius를 width, height의 중간값으로 하면 동그라미가 됨
+  */
+  border-radius: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  transition-property: background-color, opacity, visibility;
+  transition-duration: 0.3s, 0.5s, 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+/*
+  아이콘 적용 방법
+    1. ::after (요소 뒤에 content 추가) 가상 요소에서,
+    2. content: "ontawesome unicode를 넣고,
+    3. font-family: FontAwesome 이라고 넣으면 됨.
+*/
+#backtotop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: #fff;
+}
+
+#backtotop.show:hover {
+  cursor: pointer;
+  background-color: #2186c4;
+}
+
+#backtotop.show {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(47, 48, 49);
+}
+
+/*
+  drag 할 수 있는 아이템임을 나타내는 표시로 포인터를 설정
+*/
+ul li img:hover {
+  cursor: grab; /* IE11에서는 지원 안함 */
+}
+
+/*
+  dragging 중인 상태에서 잡는 표시를 포인터로 변경함
+*/
+ul li img:active {
+  cursor: grabbing; /* IE11에서는 지원 안함 */
+}
+
 @media only screen and (min-width: 1200px) {
   .inner {
     max-width: 1200px;
@@ -347,5 +425,41 @@ footer {
   }
   .roadmap-desc {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .class-skill {
+    display: none;
+  }
+  .class-container {
+    padding: 0.5rem;
+  }
+  .class-desc {
+    margin-top: 0rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+  .message {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #fff;
+    line-height: 2rem;
+  }
+  .class-skill {
+    display: none;
+  }
+  .class-container {
+    padding: 0.5rem;
+  }
+  .class-desc {
+    margin-top: 0.3rem;
   }
 }
