@@ -21,3 +21,9 @@ This folder is a folder that organizes basic concepts for web development such a
 ### concept(ES)
 
 This is a folder where information on ES5 and ES6 is organized and practiced.
+
+------
+
+### Practice
+
+Let's make a usable web page.
