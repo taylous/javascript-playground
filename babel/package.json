@@ -1,0 +1,21 @@
+{
+  "name": "javascript-practice",
+  "version": "1.0.0",
+  "main": "temp.js",
+  "scripts": {
+    "dev": "node scripts/start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "packageManager": "pnpm@9.12.2+sha256.2ef6e547b0b07d841d605240dce4d635677831148cd30f6d564b8f4f928f73d2",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
